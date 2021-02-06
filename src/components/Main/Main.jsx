@@ -3,7 +3,8 @@ import {Card , CardHeader, CardContent, Typography,Divider} from "@material-ui/c
 import {Form} from "./Form/Form";
 import useStyles from "./Styles";
 import {ExpenseTrackerContext} from "./../../context/context";
-
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const Main = ()=>{
     const classes = useStyles();
     return(
@@ -12,14 +13,15 @@ const Main = ()=>{
                 <CardHeader title="Expense Tracker" subheader="By Avash Mitra" />
                 <CardContent>
                     <Typography align="center" variant="h5">{`Total Balance is: ${TotalBalance()}`}</Typography>
-                    <Typography variant="subtitle1" style={{lineHeight:"1.5em" , marginTop:"20px"}}>
-                       
-                    </Typography>
                     <Divider/>
                     <Form />
                 </CardContent>
-                <CardContent className={classes.cardContent}>
-                   
+                <CardContent className={classes.icons}>
+                    <Typography variant="subtitle1" >
+                        Contact
+                    </Typography>
+                <a href="https://github.com/Avash027/expenseTracker" target="__blank" rel="noreferrer"><GitHubIcon  /></a> 
+                <a href="https://www.linkedin.com/in/avash-mitra-4548761a6/" target="__blank" rel="noreferrer" ><LinkedInIcon /></a>  
                 </CardContent>
             </Card>
         </div>

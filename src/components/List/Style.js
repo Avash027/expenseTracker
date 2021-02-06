@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
   },
   list: {
     maxHeight: "400px",
-    borderRadius: "2%",
+    border: "1px solid black",
     overflow: "auto",
     backgroundColor: "white",
   },

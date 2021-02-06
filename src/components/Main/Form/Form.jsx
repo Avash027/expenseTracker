@@ -20,12 +20,10 @@ export const Form = () => {
     const [open,setOpen] = useState({current:false , type:""});
     const [formData , setFormData] = useState(initialState);
     const {addTransaction} = useContext(ExpenseTrackerContext);
-    const {segment} = useSpeechContext();
-    console.log(segment)
 
     const createTransaction = ()=>{
        const transaction = {...formData , amount:Number(formData.amount) , id:uuidv4()};
-       console.log(transaction)
+       if(!isValid(formData)) return alert("Enter valid Transaction");
        addTransaction(transaction);
        setFormData(initialState);
        setOpen({current:true , type:transaction.type});
@@ -69,4 +67,10 @@ export const Form = () => {
             <Button className={classes.button} variant="outlined" color="secondary" onClick={createTransaction} fullWidth>Create</Button>
         </Grid>
     )
+}
+
+function isValid({amount,category,type,date}){
+    return !Number.isNaN(amount) &&
+        category &&
+        type 
 }

@@ -16,7 +16,7 @@ const List = () => {
     }
 
     return (
-        <MUIList  dense={false} className={classes.list}>
+        <MUIList aria-label="History"  dense={false} className={classes.list}>
             {transactions.map(transaction=>{
                 return <Slide direction="down" in mountOnEnter unmountOnExit key={transaction.id}>
                     <ListItem>

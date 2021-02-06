@@ -21,4 +21,7 @@ export default makeStyles((theme) => ({
   divider: {
     margin: "20px 0",
   },
+  icons: {
+    padding: "10px",
+  },
 }));
