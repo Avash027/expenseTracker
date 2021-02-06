@@ -1,26 +1,26 @@
 const incomeColors = [
   "#123123",
-  "#154731",
-  "#165f40",
-  "#16784f",
+  "#f09707",
+  "#07f0e4",
+  "#f0079b",
   "#14915f",
   "#10ac6e",
-  "#0bc77e",
+  "#f03232",
   "#04e38d",
-  "#00ff9d",
+  "#e3f032",
 ];
 const expenseColors = [
-  "#b50d12",
+  "#f06c6c",
   "#bf2f1f",
-  "#c9452c",
+  "#4b7dfa",
   "#d3583a",
   "#dc6a48",
   "#e57c58",
-  "#ee8d68",
+  "#da4bfa",
   "#f79d79",
-  "#ffae8a",
+  "#d929b0",
   "#cc474b",
-  "#f55b5f",
+  "#e3f032",
 ];
 
 export const incomeCategories = [

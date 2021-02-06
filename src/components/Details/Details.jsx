@@ -7,7 +7,7 @@ import useTransactions from "../../useTransactions";
 
 import useStyles from "./Styles";
 const Details = ({title})=>{
-    const {filteredCategories, total, chartData} = useTransactions(title);
+    const { total, chartData} = useTransactions(title);
     const classes = useStyles();
     return(
         <Card className={title==="Income"?classes.income:classes.expense}>

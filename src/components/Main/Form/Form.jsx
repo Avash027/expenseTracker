@@ -7,6 +7,7 @@ import formatDate from "../../../utils/formatDate"
 import Snackbar from "../../Snackbar/Snackbar";
 import {ExpenseTrackerContext} from "../../../context/context";
 
+
 const initialState={
     amount:"",
     category:"",
@@ -19,7 +20,9 @@ export const Form = () => {
     const [open,setOpen] = useState({current:false , type:""});
     const [formData , setFormData] = useState(initialState);
     const {addTransaction} = useContext(ExpenseTrackerContext);
-    
+    const {segment} = useSpeechContext();
+    console.log(segment)
+
     const createTransaction = ()=>{
        const transaction = {...formData , amount:Number(formData.amount) , id:uuidv4()};
        console.log(transaction)
@@ -37,7 +40,7 @@ export const Form = () => {
             <Snackbar open={open} setOpen={setOpen} />
             <Grid item xs={12}>
                 <Typography align="center" variant="subtitle2" gutterBottom>
-                    ........
+                 
                 </Typography>
             </Grid>
             <Grid item xs={6}>
